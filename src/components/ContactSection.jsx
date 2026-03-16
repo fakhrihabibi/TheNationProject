@@ -1,6 +1,10 @@
 import SectionIntro from './SectionIntro'
 
 const ContactSection = ({ marketingContact }) => {
+  const emailHref = `mailto:${marketingContact.email}`
+  const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(marketingContact.email)}`
+  const phoneHref = `tel:${marketingContact.phone.replace(/[^\d+]/g, '')}`
+
   return (
     <section id="contact" className="bg-nationwhite px-6 py-24 lg:px-8">
       <div className="mx-auto grid max-w-7xl items-center gap-12 md:px-6 lg:grid-cols-2 lg:px-10">
@@ -8,8 +12,14 @@ const ContactSection = ({ marketingContact }) => {
           <SectionIntro
             eyebrow="Contact Person Marketing"
             title="Talk to our marketing team about partnerships, campaigns, and upcoming initiatives."
-            description="For inquiries related to sponsorships, event marketing, or brand collaboration, use the details below or send a message directly."
+            description="For sponsorships, event marketing, or brand collaboration, contact us directly and we will route your inquiry to the right discussion quickly."
           />
+          <div className="mt-8 rounded-[1.75rem] border border-nationamber/60 bg-[#fff7f2] p-6 text-sm leading-7 text-slate-700">
+            <p className="font-semibold uppercase tracking-[0.28em] text-nationorange">Best for</p>
+            <p className="mt-3">
+              Brand collaborations, campaign partnerships, event proposals, and community activation opportunities.
+            </p>
+          </div>
         </div>
 
         <div className="w-full">
@@ -18,9 +28,38 @@ const ContactSection = ({ marketingContact }) => {
               Marketing Contact
             </p>
             <h3 className="mt-4 font-display text-3xl font-bold">{marketingContact.name}</h3>
-            <div className="mt-6 space-y-4 text-base text-white/80">
-              <p>Phone: {marketingContact.phone}</p>
-              <p>Email: {marketingContact.email}</p>
+            <p className="mt-3 text-sm text-white/75">{marketingContact.responseTime}</p>
+            <div className="mt-6 space-y-4 text-base text-white/85">
+              <p>
+                Phone:{' '}
+                <a className="font-semibold underline decoration-nationamber underline-offset-4" href={phoneHref}>
+                  {marketingContact.phone}
+                </a>
+              </p>
+              <p>
+                Email:{' '}
+                <a className="font-semibold underline decoration-nationamber underline-offset-4" href={emailHref}>
+                  {marketingContact.email}
+                </a>
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={marketingContact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-nationamber bg-white px-5 py-3 text-sm font-semibold text-nationred transition hover:bg-[#fff7f2]"
+              >
+                Chat on WhatsApp
+              </a>
+              <a
+                href={gmailComposeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Send Email
+              </a>
             </div>
           </div>
         </div>

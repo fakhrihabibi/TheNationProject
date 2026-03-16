@@ -106,18 +106,27 @@ export const events = [
     description:
       'A full-day forum featuring industry speakers, executive networking, and curated discussions on innovation and growth.',
     date: 'September 12, 2025',
+    format: 'Executive forum',
+    scale: '350 invited attendees',
+    outcome: 'Connected senior decision-makers with curated partnership opportunities.',
   },
   {
     title: 'Creative Futures Summit',
     description:
       'A future-focused summit that united creators, founders, and brand teams around collaboration, trends, and strategic partnerships.',
     date: 'May 24, 2025',
+    format: 'Trend and innovation summit',
+    scale: '500+ audience reach',
+    outcome: 'Expanded brand visibility through creator, founder, and media participation.',
   },
   {
     title: 'Community Impact Night',
     description:
       'An evening experience celebrating local initiatives, social impact stories, and cross-sector collaboration opportunities.',
     date: 'February 8, 2025',
+    format: 'Community showcase',
+    scale: '20+ local partners',
+    outcome: 'Strengthened community relationships and sponsor engagement.',
   },
 ]
 
@@ -158,6 +167,6 @@ export const marketingContact = {
   name: 'Fathan',
   phone: '+62 812-3456-7890',
   email: 'thenationid@gmail.com',
+  responseTime: 'Usually replies within 1 business day',
+  whatsapp: 'https://wa.me/6281234567890',
 }
-
-

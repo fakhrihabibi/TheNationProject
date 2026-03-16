@@ -8,35 +8,49 @@ const HeroSection = ({ stats }) => {
       <div className="relative mx-auto grid max-w-7xl gap-10 md:gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="max-w-3xl">
           <span className="inline-flex rounded-full border border-nationamber bg-nationorange px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-nationwhite">
-            Curating Impactful Experiences
+            Strategic Events and Brand Activations
           </span>
           <h1 className="mt-6 font-display text-3xl font-bold leading-tight sm:text-4xl md:mt-8 md:text-5xl lg:text-6xl">
-            The Nation builds meaningful events, communities, and partnerships that move brands
-            forward.
+            The Nation helps brands turn events into visibility, relationships, and measurable momentum.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-nationred/80 sm:text-lg sm:leading-8 md:mt-6">
-            We design programs that connect people to ideas, culture, and opportunity through
-            strategic event execution and compelling brand storytelling.
+            We partner with companies, institutions, and communities to shape launches, forums, activations, and audience experiences that feel premium and deliver a clear business outcome.
           </p>
+          <div className="mt-6 rounded-[1.75rem] border border-nationamber/60 bg-white/80 p-5 shadow-soft backdrop-blur-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-nationorange">Built for teams that need more than a nice-looking event</p>
+            <p className="mt-3 text-sm leading-7 text-nationred/75 sm:text-base">
+              From concept and audience planning to partner coordination and on-site execution, we keep strategy and delivery aligned from start to finish.
+            </p>
+          </div>
           <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
             <a
-              href="#services"
+              href="#contact"
               className="rounded-full border border-nationamber bg-nationcrimson px-5 py-3 text-sm font-semibold text-nationwhite transition hover:bg-nationorangedeep sm:px-6"
             >
-              Explore Services
+              Start a Project
             </a>
             <a
               href="#portfolio"
               className="rounded-full border border-nationamber px-5 py-3 text-sm font-semibold text-nationred transition hover:bg-nationorange hover:text-nationwhite sm:px-6"
             >
-              View Portfolio
+              View Selected Work
             </a>
           </div>
         </div>
 
         <div className="grid w-full gap-5">
           <div className="w-full rounded-[2rem] border border-nationamber bg-nationwhite/90 p-5 shadow-soft backdrop-blur-md sm:p-6">
-            <p className="text-sm uppercase tracking-[0.32em] text-nationorange">Why The Nation</p>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm uppercase tracking-[0.32em] text-nationorange">Why The Nation</p>
+                <p className="mt-2 max-w-md text-sm leading-6 text-nationred/75">
+                  A practical partner for brand teams that need strong creative direction and reliable execution under one roof.
+                </p>
+              </div>
+              <span className="rounded-full border border-nationamber/70 bg-[#fff7f2] px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-nationred">
+                End-to-end support
+              </span>
+            </div>
             <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
               {stats.map((stat) => (
                 <div
@@ -63,8 +77,7 @@ const HeroSection = ({ stats }) => {
               <div className="flex-1 rounded-3xl border border-nationamber/50 bg-white p-5">
                 <p className="text-sm uppercase tracking-[0.32em] text-nationorange">Approach</p>
                 <p className="mt-5 text-sm leading-7 text-nationred/80">
-                  Data-informed planning, premium execution, and a creative direction built to feel
-                  contemporary, polished, and memorable.
+                  Data-informed planning, premium execution, and creative direction designed to produce a result stakeholders can clearly see and measure.
                 </p>
               </div>
             </div>
