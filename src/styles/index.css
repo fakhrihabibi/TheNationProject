@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nation-red: #C0392B;
+  --nation-crimson: #E74C3C;
+  --nation-orange-deep: #E8470A;
+  --nation-orange: #F47421;
+  --nation-amber: #F5A623;
+  --nation-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Manrope', sans-serif;
+  background: var(--nation-white);
+  color: var(--nation-red);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(244, 116, 33, 0.24);
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  #root {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  header > nav {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  #home > div:nth-of-type(2) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  #home h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+  }
+
+  #home > div:nth-of-type(2) > div:last-child,
+  #home > div:nth-of-type(2) > div:last-child > div:first-child,
+  #home > div:nth-of-type(2) > div:last-child > div:last-child {
+    width: 100% !important;
+  }
+
+  #home > div:nth-of-type(2) > div:last-child > div:first-child > div:last-child {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  #home > div:nth-of-type(2) > div:last-child > div:last-child > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #home > div:nth-of-type(2) > div:last-child > div:last-child > div:first-child > div {
+    width: 100% !important;
+  }
+
+  #about > div,
+  #contact > div {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  #services > div > div:last-child,
+  #portfolio > div > div:last-child,
+  #social > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  #previous-clients > div > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #social > div > div:last-child > *,
+  #services > div > div:last-child > *,
+  #portfolio > div > div:last-child > *,
+  #previous-clients > div > div:last-child > *,
+  #about > div > div:last-child > *,
+  #contact > div > div:last-child {
+    min-width: 0;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea {
+    word-break: break-word;
+  }
+}
