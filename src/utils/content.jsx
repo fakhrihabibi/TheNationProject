@@ -34,36 +34,77 @@ const MegaphoneIcon = () => (
 )
 
 const InstagramIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <rect x="3" y="3" width="18" height="18" rx="5" />
-    <circle cx="12" cy="12" r="4" />
-    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  <svg
+    viewBox="0 0 24 24"
+    className="h-7 w-7"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+    <circle cx="12" cy="12" r="3.75" />
+    <circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none" />
   </svg>
 )
 
 const TikTokIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <path d="M14 4c1 2 2.5 3.6 5 4v3a8 8 0 0 1-5-1.7V15a5 5 0 1 1-5-5" />
+  <svg
+    viewBox="0 0 24 24"
+    className="h-7 w-7"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M14 4v8.5a4 4 0 1 1-4-4" />
+    <path d="M14 4c.9 2 2.5 3.6 5 4.2v2.7A8.6 8.6 0 0 1 14 9.1" />
   </svg>
 )
 
 const YoutubeIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <path d="M22 12s0-3-1-4.5c-1.1-1.6-2.6-1.6-3.2-1.7C15.2 5.5 12 5.5 12 5.5h0s-3.2 0-5.8.3c-.6.1-2.1.1-3.2 1.7C2 9 2 12 2 12s0 3 1 4.5c1.1 1.6 2.6 1.6 3.2 1.7 2.6.3 5.8.3 5.8.3s3.2 0 5.8-.3c.6-.1 2.1-.1 3.2-1.7 1-1.5 1-4.5 1-4.5Z" />
-    <path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none" />
+  <svg
+    viewBox="0 0 24 24"
+    className="h-7 w-7"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M21 12c0 2.8-.3 4.4-.8 5.2-.6.9-1.5 1.2-3.1 1.4-1.4.2-3.1.2-5.1.2s-3.7 0-5.1-.2c-1.6-.2-2.5-.5-3.1-1.4C3.3 16.4 3 14.8 3 12s.3-4.4.8-5.2c.6-.9 1.5-1.2 3.1-1.4 1.4-.2 3.1-.2 5.1-.2s3.7 0 5.1.2c1.6.2 2.5.5 3.1 1.4.5.8.8 2.4.8 5.2Z" />
+    <path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none" />
   </svg>
 )
 
 const XIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <path d="M4 4l16 16" />
-    <path d="M20 4 4 20" />
+  <svg
+    viewBox="0 0 24 24"
+    className="h-7 w-7"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M5 4h3.2l10.8 16H15.8Z" />
+    <path d="M19 4 5 20" />
   </svg>
 )
 
 const FacebookIcon = () => (
-  <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
-    <path d="M14 8h3V4h-3a5 5 0 0 0-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9a1 1 0 0 1 1-1Z" />
+  <svg
+    viewBox="0 0 24 24"
+    className="h-7 w-7"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M13.5 21v-7h3l.8-3h-3.8V8.9c0-1 .4-1.9 2-1.9H17V4.2c-.5-.1-1.4-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.4V11H8v3h2.5v7" />
   </svg>
 )
 
