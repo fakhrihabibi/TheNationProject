@@ -1,3 +1,6 @@
+import bnm2025Image from '../assets/BNM 2025.webp'
+import knation2025Image from '../assets/K-NATION 2025.webp'
+
 const AudienceIcon = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
@@ -143,33 +146,83 @@ export const services = [
 
 export const events = [
   {
-    title: 'Nation Leadership Forum',
+    title: 'Bogor Nation Matsuri 2025',
     description:
-      'A full-day forum featuring industry speakers, executive networking, and curated discussions on innovation and growth.',
-    date: 'September 12, 2025',
-    format: 'Executive forum',
-    scale: '350 invited attendees',
-    outcome: 'Connected senior decision-makers with curated partnership opportunities.',
-    image: null,
+      'A full-day Japanese cultural festival celebrating the local fan community through idol performances, cosplay walk, cover singing, and cover dance competitions. Bringing together Bogor finest creative youth talents on one stage.',
+    date: 'May 3-4, 2025',
+    category: 'Cultural Festival',
+    scale: '2000+ visitors',
+    outcome: 'United Bogor Japanese culture enthusiast community, showcased local creative talents, and strengthened the youth creative ecosystem in the city.s.',
+    image: bnm2025Image,
   },
   {
-    title: 'Creative Futures Summit',
+    title: 'K-NATION: HYBE SERIES 2025',
     description:
-      'A future-focused summit that united creators, founders, and brand teams around collaboration, trends, and strategic partnerships.',
-    date: 'May 24, 2025',
-    format: 'Trend and innovation summit',
-    scale: '500+ audience reach',
+      'A future-focused summit that united creators, founders, and brand teams around collaboration, trends, and strategic partnerships. The program highlighted emerging audience behavior, content innovation, and creator-brand collaboration models.',
+    date: 'October 19, 2025',
+    category: 'Cultural Festival',
+    scale: '300+ audience reach',
     outcome: 'Expanded brand visibility through creator, founder, and media participation.',
-    image: null,
+    image: knation2025Image,
   },
   {
     title: 'Community Impact Night',
     description:
-      'An evening experience celebrating local initiatives, social impact stories, and cross-sector collaboration opportunities.',
+      'An evening experience celebrating local initiatives, social impact stories, and cross-sector collaboration opportunities. The event combined storytelling, appreciation moments, and sponsor networking to deepen regional partnerships.',
     date: 'February 8, 2025',
-    format: 'Community showcase',
+    category: 'Community Showcase',
     scale: '20+ local partners',
     outcome: 'Strengthened community relationships and sponsor engagement.',
+    image: null,
+  },
+  {
+    title: 'Brand Launch Experience',
+    description:
+      'A high-energy launch event designed to introduce a new product line through immersive staging, interactive touchpoints, and coordinated media coverage. Guest flow, reveal timing, and brand storytelling were built to maximize memorability and shareability.',
+    date: 'November 3, 2025',
+    category: 'Product Launch',
+    scale: '700 guests across one evening',
+    outcome: 'Generated strong launch momentum with immediate press pickup and high attendee engagement.',
+    image: null,
+  },
+  {
+    title: 'Private Investor Roundtable',
+    description:
+      'An intimate roundtable session for selected investors and founders featuring moderated discussion, portfolio updates, and structured relationship-building. The setting was tailored to encourage focused dialogue and high-value introductions.',
+    date: 'August 19, 2025',
+    category: 'Private Session',
+    scale: '45 curated participants',
+    outcome: 'Created direct follow-up opportunities between investors, founders, and strategic advisors.',
+    image: null,
+  },
+  {
+    title: 'Youth Creator Camp',
+    description:
+      'A multi-session creator development program for young talents covering content planning, storytelling, performance coaching, and collaboration frameworks. Sessions were structured to build both skills and community momentum.',
+    date: 'July 6, 2025',
+    category: 'Workshop Series',
+    scale: '120 program participants',
+    outcome: 'Improved creator readiness while building a stronger pipeline for community-led campaigns.',
+    image: null,
+  },
+  {
+    title: 'Corporate Appreciation Gala',
+    description:
+      'A formal appreciation evening recognizing partners, clients, and internal teams through curated dining, awards, and brand-led stage programming. The experience balanced hospitality, prestige, and strategic relationship nurturing.',
+    date: 'December 14, 2025',
+    category: 'Corporate Gala',
+    scale: '280 VIP attendees',
+    outcome: 'Reinforced partner loyalty and elevated the company�s executive-facing brand presence.',
+    image: null,
+  },
+  {
+    title: 'Regional Business Connect',
+    description:
+      'A regional networking and showcase platform that brought together entrepreneurs, local institutions, and support ecosystems. The event included showcase booths, matching sessions, and short-form talks from business leaders.',
+    date: 'April 17, 2025',
+    category: 'Business Networking',
+    scale: '60 exhibitors and partners',
+    outcome: 'Accelerated local business introductions and opened new cross-sector collaboration channels.',
     image: null,
   },
 ]

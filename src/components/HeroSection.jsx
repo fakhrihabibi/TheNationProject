@@ -1,3 +1,5 @@
+import { marketingContact } from '../utils/content'
+
 const HeroSection = ({ stats }) => {
   return (
     <section
@@ -26,10 +28,12 @@ const HeroSection = ({ stats }) => {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
-              href="#contact"
+              href={marketingContact.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               className="w-full rounded-full border border-nationamber bg-nationcrimson px-5 py-3 text-center text-sm font-semibold text-nationwhite transition hover:bg-nationorangedeep sm:w-auto sm:px-6"
             >
-              Start a Project
+              Contact Us
             </a>
             <a
               href="#portfolio"
