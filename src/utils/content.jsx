@@ -150,6 +150,7 @@ export const events = [
     format: 'Executive forum',
     scale: '350 invited attendees',
     outcome: 'Connected senior decision-makers with curated partnership opportunities.',
+    image: null,
   },
   {
     title: 'Creative Futures Summit',
@@ -159,6 +160,7 @@ export const events = [
     format: 'Trend and innovation summit',
     scale: '500+ audience reach',
     outcome: 'Expanded brand visibility through creator, founder, and media participation.',
+    image: null,
   },
   {
     title: 'Community Impact Night',
@@ -168,7 +170,21 @@ export const events = [
     format: 'Community showcase',
     scale: '20+ local partners',
     outcome: 'Strengthened community relationships and sponsor engagement.',
+    image: null,
   },
+]
+
+export const clients = [
+  { name: 'Client Name 01', logo: null },
+  { name: 'Client Name 02', logo: null },
+  { name: 'Client Name 03', logo: null },
+  { name: 'Client Name 04', logo: null },
+  { name: 'Client Name 05', logo: null },
+  { name: 'Client Name 06', logo: null },
+  { name: 'Client Name 07', logo: null },
+  { name: 'Client Name 08', logo: null },
+  { name: 'Client Name 09', logo: null },
+  { name: 'Client Name 10', logo: null },
 ]
 
 export const socialLinks = [

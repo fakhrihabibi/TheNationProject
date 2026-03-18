@@ -7,7 +7,7 @@ import PreviousClientsSection from '../components/PreviousClientsSection'
 import ServicesSection from '../components/ServicesSection'
 import SocialSection from '../components/SocialSection'
 import WhatIsSection from '../components/WhatIsSection'
-import { events, marketingContact, services, socialLinks, stats } from '../utils/content'
+import { clients, events, marketingContact, services, socialLinks, stats } from '../utils/content'
 
 const HomePage = () => {
   return (
@@ -19,7 +19,7 @@ const HomePage = () => {
         <ServicesSection services={services} />
         <EventSection events={events} />
         <SocialSection socialLinks={socialLinks} />
-        <PreviousClientsSection />
+        <PreviousClientsSection clients={clients} />
         <ContactSection marketingContact={marketingContact} />
       </main>
       <Footer />

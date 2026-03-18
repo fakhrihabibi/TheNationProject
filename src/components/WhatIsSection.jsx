@@ -20,8 +20,8 @@ const values = [
 
 const WhatIsSection = () => {
   return (
-    <section id="about" className="bg-nationwhite px-6 py-24 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+    <section id="about" className="bg-nationwhite px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 sm:gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
         <SectionIntro
           eyebrow="What Is The Nation"
           title="A modern organization focused on people, momentum, and meaningful brand presence."
@@ -32,7 +32,7 @@ const WhatIsSection = () => {
           {values.map((value) => (
             <article
               key={value.title}
-              className="rounded-[2rem] border border-nationamber/60 bg-white p-8 shadow-soft"
+              className="rounded-[2rem] border border-nationamber/60 bg-white p-6 shadow-soft sm:p-8"
             >
               <p className="text-sm font-semibold uppercase tracking-[0.32em] text-nationorange">
                 {value.title}

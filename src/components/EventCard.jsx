@@ -1,8 +1,12 @@
 const EventCard = ({ event }) => {
   return (
     <article className="overflow-hidden rounded-[2rem] border border-nationamber/60 bg-white shadow-soft">
-      <div className="flex h-56 items-end bg-[linear-gradient(135deg,#C0392B,#E74C3C,#F47421)] p-6">
-        <span className="rounded-full border border-nationamber bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+      <div className="relative flex h-56 items-end bg-[linear-gradient(135deg,#C0392B,#E74C3C,#F47421)] p-6">
+        {event.image ? (
+          <img src={event.image} alt={event.title} className="absolute inset-0 h-full w-full object-cover" />
+        ) : null}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
+        <span className="relative rounded-full border border-nationamber bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white backdrop-blur-sm">
           {event.format}
         </span>
       </div>
