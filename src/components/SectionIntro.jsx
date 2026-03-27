@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
+
 const SectionIntro = ({ eyebrow, title, description, align = 'left', tone = 'dark' }) => {
   const alignmentClass = align === 'center' ? 'mx-auto text-center' : ''
-  const titleClass = tone === 'light' ? 'text-nationred' : 'text-nationred'
+  const titleClass = tone === 'light' ? 'text-white' : 'text-nationred'
   const descriptionClass = tone === 'light' ? 'text-nationred/80' : 'text-slate-600'
 
   return (
@@ -16,6 +18,14 @@ const SectionIntro = ({ eyebrow, title, description, align = 'left', tone = 'dar
       </p>
     </div>
   )
+}
+
+SectionIntro.propTypes = {
+  eyebrow: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  align: PropTypes.oneOf(['left', 'center']),
+  tone: PropTypes.oneOf(['light', 'dark']),
 }
 
 export default SectionIntro

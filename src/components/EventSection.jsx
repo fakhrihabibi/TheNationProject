@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import EventCard from './EventCard'
 import SectionIntro from './SectionIntro'
 
@@ -162,6 +163,20 @@ const EventSection = ({ events }) => {
       ) : null}
     </section>
   )
+}
+
+EventSection.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      scale: PropTypes.string.isRequired,
+      outcome: PropTypes.string.isRequired,
+      image: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 export default EventSection

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const EventCard = ({ event, index, onOpen }) => {
   const previewGradients = [
     'from-[#8C1C13] via-[#C0392B] to-[#F47421]',
@@ -12,8 +14,23 @@ const EventCard = ({ event, index, onOpen }) => {
     <article className="flex h-full flex-col justify-between overflow-hidden rounded-[2rem] border border-nationamber/60 bg-white shadow-soft">
       <div className={`relative flex h-56 items-end overflow-hidden bg-gradient-to-br ${previewGradient} p-6`}>
         {event.image ? (
-          <img src={event.image} alt={event.title} className="absolute inset-0 h-full w-full object-cover" />
-        ) : null}
+          <img 
+            src={event.image} 
+            alt={event.title} 
+            className="absolute inset-0 h-full w-full object-cover"
+            onError={(e) => {
+              e.target.style.display = 'none'
+            }}
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white/40">
+              <svg className="mx-auto h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
         <div className="absolute left-5 top-5">
           <span className="rounded-full border border-white/30 bg-white/15 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white backdrop-blur-sm">
@@ -48,11 +65,25 @@ const EventCard = ({ event, index, onOpen }) => {
           onClick={onOpen}
           className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-full bg-gradient-to-r from-nationred via-nationcrimson to-nationorange px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:scale-[1.01] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-nationorange/50 focus:ring-offset-2"
         >
-          Selengkapnya
+          Read More
         </button>
       </div>
     </article>
   )
+}
+
+EventCard.propTypes = {
+  event: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    scale: PropTypes.string.isRequired,
+    outcome: PropTypes.string.isRequired,
+    image: PropTypes.string,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+  onOpen: PropTypes.func.isRequired,
 }
 
 export default EventCard

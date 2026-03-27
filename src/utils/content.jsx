@@ -1,5 +1,7 @@
-import bnm2025Image from '../assets/BNM 2025.webp'
-import knation2025Image from '../assets/K-NATION 2025.webp'
+import bnm2025Image from '../assets/events/bnm-2025.webp'
+import knation2025Image from '../assets/events/k-nation-2025.webp'
+import clientBanner1 from '../assets/clients/client-banner-1.png'
+import clientBanner2 from '../assets/clients/client-banner-2.png'
 
 const AudienceIcon = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -87,8 +89,7 @@ const XIcon = () => (
     viewBox="0 0 24 24"
     className="h-7 w-7"
     fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
+    stroke="currentColor" strokeWidth="1.8"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -112,7 +113,7 @@ const FacebookIcon = () => (
 )
 
 export const stats = [
-  { value: '40+', label: 'Events delivered' },
+  { value: '40+', label: 'Projects Delivered' },
   { value: '25', label: 'Strategic partners' },
   { value: '120K', label: 'Audience reach' },
 ]
@@ -152,7 +153,7 @@ export const events = [
     date: 'May 3-4, 2025',
     category: 'Cultural Festival',
     scale: '2000+ visitors',
-    outcome: 'United Bogor Japanese culture enthusiast community, showcased local creative talents, and strengthened the youth creative ecosystem in the city.s.',
+    outcome: 'United Bogor Japanese culture enthusiast community, showcased local creative talents, and strengthened the youth creative ecosystem in the city.',
     image: bnm2025Image,
   },
   {
@@ -166,42 +167,42 @@ export const events = [
     image: knation2025Image,
   },
   {
-    title: 'Community Impact Night',
+    title: 'Japan Summer Time Fest 2025',
     description:
       'An evening experience celebrating local initiatives, social impact stories, and cross-sector collaboration opportunities. The event combined storytelling, appreciation moments, and sponsor networking to deepen regional partnerships.',
-    date: 'February 8, 2025',
-    category: 'Community Showcase',
-    scale: '20+ local partners',
+    date: 'August 24, 2025',
+    category: 'Cultural Festival',
+    scale: '300+ visitors',
     outcome: 'Strengthened community relationships and sponsor engagement.',
     image: null,
   },
   {
-    title: 'Brand Launch Experience',
+    title: 'JPOPVAGANZA 2024',
     description:
       'A high-energy launch event designed to introduce a new product line through immersive staging, interactive touchpoints, and coordinated media coverage. Guest flow, reveal timing, and brand storytelling were built to maximize memorability and shareability.',
-    date: 'November 3, 2025',
-    category: 'Product Launch',
-    scale: '700 guests across one evening',
+    date: 'November 17, 2024',
+    category: 'Cultural Festival',
+    scale: '3000+ visitors',
     outcome: 'Generated strong launch momentum with immediate press pickup and high attendee engagement.',
     image: null,
   },
   {
-    title: 'Private Investor Roundtable',
+    title: 'Bogor Nation Matsuri 2024',
     description:
       'An intimate roundtable session for selected investors and founders featuring moderated discussion, portfolio updates, and structured relationship-building. The setting was tailored to encourage focused dialogue and high-value introductions.',
-    date: 'August 19, 2025',
-    category: 'Private Session',
-    scale: '45 curated participants',
+    date: 'September 8, 2024',
+    category: 'Cultural Festival',
+    scale: '3000+ visitors',
     outcome: 'Created direct follow-up opportunities between investors, founders, and strategic advisors.',
     image: null,
   },
   {
-    title: 'Youth Creator Camp',
+    title: 'Pra-Event Bogor Nation Matsuri 2024',
     description:
       'A multi-session creator development program for young talents covering content planning, storytelling, performance coaching, and collaboration frameworks. Sessions were structured to build both skills and community momentum.',
-    date: 'July 6, 2025',
-    category: 'Workshop Series',
-    scale: '120 program participants',
+    date: 'August 25, 2024',
+    category: 'Cultural Festival',
+    scale: '3000+ visitors',
     outcome: 'Improved creator readiness while building a stronger pipeline for community-led campaigns.',
     image: null,
   },
@@ -212,7 +213,7 @@ export const events = [
     date: 'December 14, 2025',
     category: 'Corporate Gala',
     scale: '280 VIP attendees',
-    outcome: 'Reinforced partner loyalty and elevated the company�s executive-facing brand presence.',
+    outcome: "Reinforced partner loyalty and elevated the company's executive-facing brand presence.",
     image: null,
   },
   {
@@ -228,16 +229,8 @@ export const events = [
 ]
 
 export const clients = [
-  { name: 'Client Name 01', logo: null },
-  { name: 'Client Name 02', logo: null },
-  { name: 'Client Name 03', logo: null },
-  { name: 'Client Name 04', logo: null },
-  { name: 'Client Name 05', logo: null },
-  { name: 'Client Name 06', logo: null },
-  { name: 'Client Name 07', logo: null },
-  { name: 'Client Name 08', logo: null },
-  { name: 'Client Name 09', logo: null },
-  { name: 'Client Name 10', logo: null },
+  { slide: 1, image: clientBanner1 },
+  { slide: 2, image: clientBanner2 },
 ]
 
 export const socialLinks = [

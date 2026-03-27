@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { marketingContact } from '../utils/content'
 
 const HeroSection = ({ stats }) => {
@@ -92,6 +93,15 @@ const HeroSection = ({ stats }) => {
       </div>
     </section>
   )
+}
+
+HeroSection.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
 
 export default HeroSection

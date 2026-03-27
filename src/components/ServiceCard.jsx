@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const ServiceCard = ({ service }) => {
   return (
     <article className="group rounded-[2rem] border border-nationamber/60 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:border-nationorange">
@@ -8,6 +10,14 @@ const ServiceCard = ({ service }) => {
       <p className="mt-4 text-base leading-7 text-slate-600">{service.description}</p>
     </article>
   )
+}
+
+ServiceCard.propTypes = {
+  service: PropTypes.shape({
+    icon: PropTypes.element.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default ServiceCard

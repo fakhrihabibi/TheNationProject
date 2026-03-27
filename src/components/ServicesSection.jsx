@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import SectionIntro from './SectionIntro'
 import ServiceCard from './ServiceCard'
 
@@ -19,6 +20,16 @@ const ServicesSection = ({ services }) => {
       </div>
     </section>
   )
+}
+
+ServicesSection.propTypes = {
+  services: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.element.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
 
 export default ServicesSection

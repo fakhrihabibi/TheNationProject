@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import SectionIntro from './SectionIntro'
 
 const ContactSection = ({ marketingContact }) => {
@@ -66,6 +67,16 @@ const ContactSection = ({ marketingContact }) => {
       </div>
     </section>
   )
+}
+
+ContactSection.propTypes = {
+  marketingContact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    whatsapp: PropTypes.string.isRequired,
+    responseTime: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default ContactSection

@@ -27,6 +27,14 @@ Setelah itu buka URL lokal yang ditampilkan Vite di terminal.
 npm run build
 ```
 
+## Optional Scripts
+
+```bash
+npm run preview
+npm run lint
+npm run format
+```
+
 ## Project Structure
 
 ```text
