@@ -1,9 +1,19 @@
+import { FC } from 'react'
+import {
+  Stat,
+  Service,
+  Event,
+  Client,
+  SocialLink,
+  MarketingContact,
+} from '../types'
 import bnm2025Image from '../assets/events/bnm-2025.webp'
 import knation2025Image from '../assets/events/k-nation-2025.webp'
 import clientBanner1 from '../assets/clients/client-banner-1.png'
 import clientBanner2 from '../assets/clients/client-banner-2.png'
 
-const AudienceIcon = () => (
+// Icons
+const AudienceIcon: FC = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
     <circle cx="9.5" cy="7" r="4" />
@@ -12,7 +22,7 @@ const AudienceIcon = () => (
   </svg>
 )
 
-const SparkIcon = () => (
+const SparkIcon: FC = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z" />
     <path d="M5 3v4" />
@@ -22,7 +32,7 @@ const SparkIcon = () => (
   </svg>
 )
 
-const StrategyIcon = () => (
+const StrategyIcon: FC = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="M12 20V10" />
     <path d="M18 20V4" />
@@ -30,7 +40,7 @@ const StrategyIcon = () => (
   </svg>
 )
 
-const MegaphoneIcon = () => (
+const MegaphoneIcon: FC = () => (
   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8">
     <path d="M3 11v2a2 2 0 0 0 2 2h2l4 4V5L7 9H5a2 2 0 0 0-2 2Z" />
     <path d="M16 8.5a5 5 0 0 1 0 7" />
@@ -38,7 +48,7 @@ const MegaphoneIcon = () => (
   </svg>
 )
 
-const InstagramIcon = () => (
+const InstagramIcon: FC = () => (
   <svg
     viewBox="0 0 24 24"
     className="h-7 w-7"
@@ -54,7 +64,7 @@ const InstagramIcon = () => (
   </svg>
 )
 
-const TikTokIcon = () => (
+const TikTokIcon: FC = () => (
   <svg
     viewBox="0 0 24 24"
     className="h-7 w-7"
@@ -69,7 +79,7 @@ const TikTokIcon = () => (
   </svg>
 )
 
-const YoutubeIcon = () => (
+const YoutubeIcon: FC = () => (
   <svg
     viewBox="0 0 24 24"
     className="h-7 w-7"
@@ -84,12 +94,13 @@ const YoutubeIcon = () => (
   </svg>
 )
 
-const XIcon = () => (
+const XIcon: FC = () => (
   <svg
     viewBox="0 0 24 24"
     className="h-7 w-7"
     fill="none"
-    stroke="currentColor" strokeWidth="1.8"
+    stroke="currentColor"
+    strokeWidth="1.8"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -98,7 +109,7 @@ const XIcon = () => (
   </svg>
 )
 
-const FacebookIcon = () => (
+const FacebookIcon: FC = () => (
   <svg
     viewBox="0 0 24 24"
     className="h-7 w-7"
@@ -112,13 +123,14 @@ const FacebookIcon = () => (
   </svg>
 )
 
-export const stats = [
-  { value: '40+', label: 'Projects Delivered' },
-  { value: '25', label: 'Strategic partners' },
-  { value: '120K', label: 'Audience reach' },
+// Data
+export const stats: Stat[] = [
+  { value: '40+', label: 'Projects Delivered', description: '' },
+  { value: '25', label: 'Strategic partners', description: '' },
+  { value: '120K', label: 'Audience reach', description: '' },
 ]
 
-export const services = [
+export const services: Service[] = [
   {
     title: 'Event Strategy',
     description:
@@ -145,8 +157,9 @@ export const services = [
   },
 ]
 
-export const events = [
+export const events: Event[] = [
   {
+    id: '1',
     title: 'Bogor Nation Matsuri 2025',
     description:
       'A full-day Japanese cultural festival celebrating the local fan community through idol performances, cosplay walk, cover singing, and cover dance competitions. Bringing together Bogor finest creative youth talents on one stage.',
@@ -157,6 +170,7 @@ export const events = [
     image: bnm2025Image,
   },
   {
+    id: '2',
     title: 'K-NATION: HYBE SERIES 2025',
     description:
       'A future-focused summit that united creators, founders, and brand teams around collaboration, trends, and strategic partnerships. The program highlighted emerging audience behavior, content innovation, and creator-brand collaboration models.',
@@ -167,6 +181,7 @@ export const events = [
     image: knation2025Image,
   },
   {
+    id: '3',
     title: 'Japan Summer Time Fest 2025',
     description:
       'An evening experience celebrating local initiatives, social impact stories, and cross-sector collaboration opportunities. The event combined storytelling, appreciation moments, and sponsor networking to deepen regional partnerships.',
@@ -174,9 +189,10 @@ export const events = [
     category: 'Cultural Festival',
     scale: '300+ visitors',
     outcome: 'Strengthened community relationships and sponsor engagement.',
-    image: null,
+    image: '',
   },
   {
+    id: '4',
     title: 'JPOPVAGANZA 2024',
     description:
       'A high-energy launch event designed to introduce a new product line through immersive staging, interactive touchpoints, and coordinated media coverage. Guest flow, reveal timing, and brand storytelling were built to maximize memorability and shareability.',
@@ -184,9 +200,10 @@ export const events = [
     category: 'Cultural Festival',
     scale: '3000+ visitors',
     outcome: 'Generated strong launch momentum with immediate press pickup and high attendee engagement.',
-    image: null,
+    image: '',
   },
   {
+    id: '5',
     title: 'Bogor Nation Matsuri 2024',
     description:
       'An intimate roundtable session for selected investors and founders featuring moderated discussion, portfolio updates, and structured relationship-building. The setting was tailored to encourage focused dialogue and high-value introductions.',
@@ -194,9 +211,10 @@ export const events = [
     category: 'Cultural Festival',
     scale: '3000+ visitors',
     outcome: 'Created direct follow-up opportunities between investors, founders, and strategic advisors.',
-    image: null,
+    image: '',
   },
   {
+    id: '6',
     title: 'Pra-Event Bogor Nation Matsuri 2024',
     description:
       'A multi-session creator development program for young talents covering content planning, storytelling, performance coaching, and collaboration frameworks. Sessions were structured to build both skills and community momentum.',
@@ -204,9 +222,10 @@ export const events = [
     category: 'Cultural Festival',
     scale: '3000+ visitors',
     outcome: 'Improved creator readiness while building a stronger pipeline for community-led campaigns.',
-    image: null,
+    image: '',
   },
   {
+    id: '7',
     title: 'Corporate Appreciation Gala',
     description:
       'A formal appreciation evening recognizing partners, clients, and internal teams through curated dining, awards, and brand-led stage programming. The experience balanced hospitality, prestige, and strategic relationship nurturing.',
@@ -214,9 +233,10 @@ export const events = [
     category: 'Corporate Gala',
     scale: '280 VIP attendees',
     outcome: "Reinforced partner loyalty and elevated the company's executive-facing brand presence.",
-    image: null,
+    image: '',
   },
   {
+    id: '8',
     title: 'Regional Business Connect',
     description:
       'A regional networking and showcase platform that brought together entrepreneurs, local institutions, and support ecosystems. The event included showcase booths, matching sessions, and short-form talks from business leaders.',
@@ -224,16 +244,16 @@ export const events = [
     category: 'Business Networking',
     scale: '60 exhibitors and partners',
     outcome: 'Accelerated local business introductions and opened new cross-sector collaboration channels.',
-    image: null,
+    image: '',
   },
 ]
 
-export const clients = [
-  { slide: 1, image: clientBanner1 },
-  { slide: 2, image: clientBanner2 },
+export const clients: Client[] = [
+  { id: '1', slide: 1, image: clientBanner1 },
+  { id: '2', slide: 2, image: clientBanner2 },
 ]
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     platform: 'Instagram',
     handle: '@thenation.event',
@@ -266,10 +286,10 @@ export const socialLinks = [
   },
 ]
 
-export const marketingContact = {
+export const marketingContact: MarketingContact = {
   name: 'Fathan',
   phone: '+62 812-3456-7890',
   email: 'thenationid@gmail.com',
   responseTime: 'Usually replies within 1 business day',
-  whatsapp: 'https://wa.me/6281234567890',
+  whatsappUrl: 'https://wa.me/6281234567890',
 }

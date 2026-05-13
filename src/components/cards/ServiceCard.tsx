@@ -1,6 +1,11 @@
-import PropTypes from 'prop-types'
+import { FC } from 'react'
+import { Service } from '../../types'
 
-const ServiceCard = ({ service }) => {
+interface ServiceCardProps {
+  service: Service
+}
+
+const ServiceCard: FC<ServiceCardProps> = ({ service }) => {
   return (
     <article className="group rounded-[2rem] border border-nationamber/60 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:border-nationorange">
       <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-nationred text-nationamber">
@@ -10,14 +15,6 @@ const ServiceCard = ({ service }) => {
       <p className="mt-4 text-base leading-7 text-slate-600">{service.description}</p>
     </article>
   )
-}
-
-ServiceCard.propTypes = {
-  service: PropTypes.shape({
-    icon: PropTypes.element.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
 }
 
 export default ServiceCard

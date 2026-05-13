@@ -1,8 +1,13 @@
-import PropTypes from 'prop-types'
-import SectionIntro from './SectionIntro'
-import ServiceCard from './ServiceCard'
+import { FC } from 'react'
+import { Service } from '../../types'
+import { SectionIntro } from '../common'
+import { ServiceCard } from '../cards'
 
-const ServicesSection = ({ services }) => {
+interface ServicesSectionProps {
+  services: Service[]
+}
+
+const ServicesSection: FC<ServicesSectionProps> = ({ services }) => {
   return (
     <section id="services" className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -20,16 +25,6 @@ const ServicesSection = ({ services }) => {
       </div>
     </section>
   )
-}
-
-ServicesSection.propTypes = {
-  services: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.element.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 }
 
 export default ServicesSection

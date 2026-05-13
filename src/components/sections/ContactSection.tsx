@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types'
-import SectionIntro from './SectionIntro'
+import { FC } from 'react'
+import { MarketingContact } from '../../types'
+import { SectionIntro } from '../common'
 
-const ContactSection = ({ marketingContact }) => {
+interface ContactSectionProps {
+  marketingContact: MarketingContact
+}
+
+const ContactSection: FC<ContactSectionProps> = ({ marketingContact }) => {
   const emailHref = `mailto:${marketingContact.email}`
   const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(marketingContact.email)}`
   const phoneHref = `tel:${marketingContact.phone.replace(/[^\d+]/g, '')}`
@@ -46,7 +51,7 @@ const ContactSection = ({ marketingContact }) => {
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href={marketingContact.whatsapp}
+                href={marketingContact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full rounded-full border border-nationamber bg-white px-5 py-3 text-center text-sm font-semibold text-nationred transition hover:bg-[#fff7f2] sm:w-auto"
@@ -67,16 +72,6 @@ const ContactSection = ({ marketingContact }) => {
       </div>
     </section>
   )
-}
-
-ContactSection.propTypes = {
-  marketingContact: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-    whatsapp: PropTypes.string.isRequired,
-    responseTime: PropTypes.string.isRequired,
-  }).isRequired,
 }
 
 export default ContactSection

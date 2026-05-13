@@ -1,6 +1,11 @@
-import PropTypes from 'prop-types'
+import { FC } from 'react'
+import { SocialLink } from '../../types'
 
-const SocialLinkCard = ({ socialLink }) => {
+interface SocialLinkCardProps {
+  socialLink: SocialLink
+}
+
+const SocialLinkCard: FC<SocialLinkCardProps> = ({ socialLink }) => {
   return (
     <a
       href={socialLink.href}
@@ -16,15 +21,6 @@ const SocialLinkCard = ({ socialLink }) => {
       <span className="mt-6 inline-flex text-sm font-semibold text-nationorange">Visit channel</span>
     </a>
   )
-}
-
-SocialLinkCard.propTypes = {
-  socialLink: PropTypes.shape({
-    platform: PropTypes.string.isRequired,
-    handle: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
-    icon: PropTypes.element.isRequired,
-  }).isRequired,
 }
 
 export default SocialLinkCard

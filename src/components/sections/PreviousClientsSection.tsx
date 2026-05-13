@@ -1,8 +1,12 @@
-import { useState } from 'react'
-import PropTypes from 'prop-types'
-import SectionIntro from './SectionIntro'
+import { useState, FC } from 'react'
+import { Client } from '../../types'
+import { SectionIntro } from '../common'
 
-const PreviousClientsSection = ({ clients }) => {
+interface PreviousClientsSectionProps {
+  clients: Client[]
+}
+
+const PreviousClientsSection: FC<PreviousClientsSectionProps> = ({ clients }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = Array.isArray(clients) ? clients : []
@@ -35,7 +39,6 @@ const PreviousClientsSection = ({ clients }) => {
         />
 
         <div className="relative mt-12 flex flex-col items-center justify-center sm:mt-16">
-          
           <div className="relative w-full max-w-6xl">
             {/* Navigation Arrows */}
             {totalSlides > 1 && (
@@ -79,50 +82,38 @@ const PreviousClientsSection = ({ clients }) => {
                     <div className="flex items-center justify-center">
                       <img
                         src={slide.image}
-                        alt={`Client Banner ${slideIndex + 1}`}
-                        className="h-auto w-full max-w-full object-contain"
-                        loading="lazy"
-                        onError={(e) => {
-                          e.target.src = "https://placehold.co/1200x400/FFF8F5/E2E8F0?text=Banner+Image+Missing"
-                        }}
+                        alt={`Client ${slide.slide}`}
+                        className="max-h-40 w-auto object-contain sm:max-h-56"
                       />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
 
-          {/* Dot Indicators */}
-          {totalSlides > 1 && (
-            <div className="mt-12 flex items-center justify-center gap-3">
-              {slides.map((_, slideIndex) => (
-                <button
-                  key={`dot-${slideIndex}`}
-                  type="button"
-                  onClick={() => setCurrentSlide(slideIndex)}
-                  className={`transition-all duration-300 ${
-                    slideIndex === currentSlide 
-                      ? 'h-2.5 w-12 rounded-full bg-nationred' 
-                      : 'h-2.5 w-2.5 rounded-full bg-nationamber/20 hover:bg-nationamber/40'
-                  }`}
-                />
-              ))}
-            </div>
-          )}
+            {/* Slide Indicators (Dots) */}
+            {totalSlides > 1 && (
+              <div className="mt-8 flex justify-center gap-2 sm:mt-12">
+                {slides.map((_, dotIndex) => (
+                  <button
+                    key={`dot-${dotIndex}`}
+                    type="button"
+                    onClick={() => setCurrentSlide(dotIndex)}
+                    className={`h-2.5 rounded-full transition-all ${
+                      dotIndex === currentSlide
+                        ? 'w-8 bg-nationred'
+                        : 'w-2.5 bg-nationamber/40 hover:bg-nationamber/60'
+                    }`}
+                    aria-label={`Go to slide ${dotIndex + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
   )
-}
-
-PreviousClientsSection.propTypes = {
-  clients: PropTypes.arrayOf(
-    PropTypes.shape({
-      slide: PropTypes.number.isRequired,
-      image: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 }
 
 export default PreviousClientsSection

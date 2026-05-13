@@ -1,16 +1,21 @@
-import { Component } from 'react'
+import { Component, PropsWithChildren } from 'react'
 
-class ErrorBoundary extends Component {
-  constructor(props) {
+interface ErrorBoundaryState {
+  hasError: boolean
+  error: Error | null
+}
+
+class ErrorBoundary extends Component<PropsWithChildren, ErrorBoundaryState> {
+  constructor(props: PropsWithChildren) {
     super(props)
     this.state = { hasError: false, error: null }
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error }
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo)
   }
 
@@ -34,9 +39,7 @@ class ErrorBoundary extends Component {
             </button>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mt-8 rounded-lg bg-slate-800 p-4 text-left">
-                <p className="text-sm text-red-400">
-                  {this.state.error.toString()}
-                </p>
+                <p className="text-sm text-red-400">{this.state.error.toString()}</p>
               </div>
             )}
           </div>

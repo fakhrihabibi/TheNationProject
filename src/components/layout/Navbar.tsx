@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import nationLogo from '../assets/logo/the-nation-logo.webp'
-import { marketingContact } from '../utils/content'
+import { useState, FC } from 'react'
+import nationLogo from '../../assets/logo/the-nation-logo.webp'
+import { marketingContact } from '../../utils/content'
 
 const navigationItems = [
   { label: 'About', href: '#about' },
@@ -11,7 +11,7 @@ const navigationItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleMobileNavClick = () => {
@@ -72,7 +72,7 @@ const Navbar = () => {
           </button>
 
           <a
-            href={marketingContact.whatsapp}
+            href={marketingContact.whatsappUrl}
             target="_blank"
             rel="noreferrer"
             className="hidden whitespace-nowrap rounded-full border border-nationamber bg-nationcrimson px-6 py-3 text-center text-base font-medium text-nationwhite transition hover:border-nationorangedeep hover:bg-nationorangedeep lg:inline-flex lg:items-center lg:justify-center"
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href={marketingContact.whatsapp}
+                href={marketingContact.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-2 inline-flex justify-center whitespace-nowrap rounded-full border border-nationamber bg-nationcrimson px-6 py-3 text-base font-medium text-nationwhite transition hover:border-nationorangedeep hover:bg-nationorangedeep"
