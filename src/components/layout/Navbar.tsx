@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import nationLogo from '../assets/the-nation-logo.svg'
+import { useState, FC } from 'react'
+import nationLogo from '../../assets/logo/the-nation-logo.webp'
+import { marketingContact } from '../../utils/content'
 
 const navigationItems = [
   { label: 'About', href: '#about' },
@@ -10,7 +11,7 @@ const navigationItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleMobileNavClick = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
           <img
             src={nationLogo}
             alt="The Nation logo"
-            className="h-10 w-auto max-w-none bg-transparent object-contain opacity-90 sm:h-12 lg:h-16"
+            className="h-10 w-auto bg-transparent object-contain sm:h-12 lg:h-16"
           />
         </a>
 
@@ -71,10 +72,12 @@ const Navbar = () => {
           </button>
 
           <a
-            href="#contact"
+            href={marketingContact.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
             className="hidden whitespace-nowrap rounded-full border border-nationamber bg-nationcrimson px-6 py-3 text-center text-base font-medium text-nationwhite transition hover:border-nationorangedeep hover:bg-nationorangedeep lg:inline-flex lg:items-center lg:justify-center"
           >
-            Start a Project
+            Contact Us
           </a>
         </div>
 
@@ -92,11 +95,13 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#contact"
+                href={marketingContact.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-2 inline-flex justify-center whitespace-nowrap rounded-full border border-nationamber bg-nationcrimson px-6 py-3 text-base font-medium text-nationwhite transition hover:border-nationorangedeep hover:bg-nationorangedeep"
                 onClick={handleMobileNavClick}
               >
-                Start a Project
+                Contact Us
               </a>
             </div>
           </div>

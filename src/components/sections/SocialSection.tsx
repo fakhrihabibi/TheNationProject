@@ -1,7 +1,13 @@
-import SectionIntro from './SectionIntro'
-import SocialLinkCard from './SocialLinkCard'
+import { FC } from 'react'
+import { SocialLink } from '../../types'
+import { SectionIntro } from '../common'
+import { SocialLinkCard } from '../cards'
 
-const SocialSection = ({ socialLinks }) => {
+interface SocialSectionProps {
+  socialLinks: SocialLink[]
+}
+
+const SocialSection: FC<SocialSectionProps> = ({ socialLinks }) => {
   return (
     <section id="social" className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">

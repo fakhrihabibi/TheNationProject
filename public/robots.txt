@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thenation.id/sitemap.xml

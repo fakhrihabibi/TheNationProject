@@ -1,6 +1,12 @@
-import SectionIntro from './SectionIntro'
+import { FC } from 'react'
+import { SectionIntro } from '../common'
 
-const values = [
+interface Value {
+  title: string
+  description: string
+}
+
+const values: Value[] = [
   {
     title: 'Mission',
     description:
@@ -18,7 +24,7 @@ const values = [
   },
 ]
 
-const WhatIsSection = () => {
+const WhatIsSection: FC = () => {
   return (
     <section id="about" className="bg-nationwhite px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 sm:gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">

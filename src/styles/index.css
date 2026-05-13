@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+ * Brand Color Variables
+ * These CSS variables are the single source of truth for colors.
+ * They are referenced by Tailwind config for consistent theming.
+ */
 :root {
   --nation-red: #C0392B;
   --nation-crimson: #E74C3C;

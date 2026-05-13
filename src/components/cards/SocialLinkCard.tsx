@@ -1,4 +1,11 @@
-const SocialLinkCard = ({ socialLink }) => {
+import { FC } from 'react'
+import { SocialLink } from '../../types'
+
+interface SocialLinkCardProps {
+  socialLink: SocialLink
+}
+
+const SocialLinkCard: FC<SocialLinkCardProps> = ({ socialLink }) => {
   return (
     <a
       href={socialLink.href}

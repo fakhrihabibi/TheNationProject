@@ -1,4 +1,12 @@
-const HeroSection = ({ stats }) => {
+import { FC } from 'react'
+import { Stat } from '../../types'
+import { marketingContact } from '../../utils/content'
+
+interface HeroSectionProps {
+  stats: Stat[]
+}
+
+const HeroSection: FC<HeroSectionProps> = ({ stats }) => {
   return (
     <section
       id="home"
@@ -26,10 +34,12 @@ const HeroSection = ({ stats }) => {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
-              href="#contact"
+              href={marketingContact.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
               className="w-full rounded-full border border-nationamber bg-nationcrimson px-5 py-3 text-center text-sm font-semibold text-nationwhite transition hover:bg-nationorangedeep sm:w-auto sm:px-6"
             >
-              Start a Project
+              Contact Us
             </a>
             <a
               href="#portfolio"
@@ -73,14 +83,18 @@ const HeroSection = ({ stats }) => {
                 <ul className="mt-5 space-y-3 text-sm text-nationred/80">
                   <li>Integrated event production</li>
                   <li>Brand activation strategy</li>
-                  <li>Audience growth and partnerships</li>
+                  <li>Audience research & insight</li>
+                  <li>Partnership development</li>
                 </ul>
               </div>
               <div className="flex-1 rounded-3xl border border-nationamber/50 bg-white p-5">
-                <p className="text-sm uppercase tracking-[0.32em] text-nationorange">Approach</p>
-                <p className="mt-5 text-sm leading-7 text-nationred/80">
-                  Data-informed planning, premium execution, and creative direction designed to produce a result stakeholders can clearly see and measure.
-                </p>
+                <p className="text-sm uppercase tracking-[0.32em] text-nationorange">Outcomes</p>
+                <ul className="mt-5 space-y-3 text-sm text-nationred/80">
+                  <li>Increased brand visibility</li>
+                  <li>Measurable engagement</li>
+                  <li>Relationship building</li>
+                  <li>Clear ROI metrics</li>
+                </ul>
               </div>
             </div>
           </div>
